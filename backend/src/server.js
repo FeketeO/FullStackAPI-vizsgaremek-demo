@@ -52,6 +52,7 @@ app.use('/users', authenticateJwt, adminOnly, require('./controllers/user/user.r
 app.use('/products', authenticateJwt, require('./controllers/product/product.routes'));
 app.use('/orders', authenticateJwt, adminOnly, require('./controllers/order/order.routes'));
 app.use('/cars', require('./controllers/car/routes'));
+app.use('/boats', require('./controllers/boat/boatroutes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((err, req, res, next) => {
