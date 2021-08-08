@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Boat } from 'src/app/model/boat';
 import { BoatService } from 'src/app/service/boat.service';
@@ -13,15 +14,15 @@ export class BoatCreateComponent implements OnInit {
   boat: Boat = new Boat();
 
   constructor(
-    private boatService = BoatService,
-    private router = Router,
+    private boatService: BoatService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
   }
 
-  onSave(): void {
-    this.boatService.create(this.boat).subscribe(
+  onSave(ngForm: NgForm ): void {
+    this.boatService.create(ngForm.value).subscribe(
       boat => this.router.navigate(['/', 'boats']),
       err => console.error(err)
     );
