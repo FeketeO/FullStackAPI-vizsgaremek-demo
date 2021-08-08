@@ -24,6 +24,8 @@ import { ProductEditComponent } from './page/product-edit/product-edit.component
 import { JwtInterceptorInterceptor } from './service/jwt-interceptor.interceptor';
 import { CarComponent } from './page/car/car.component';
 import { CarCreateComponent } from './page/car-create/car-create.component';
+import { BoatComponent } from './page/boat/boat.component';
+import { BoatCreateComponent } from './page/boat-create/boat-create.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CarCreateComponent } from './page/car-create/car-create.component';
     LoginComponent,
     ProductEditComponent,
     CarComponent,
-    CarCreateComponent
+    CarCreateComponent,
+    BoatComponent,
+    BoatCreateComponent
   ],
   imports: [
     BrowserModule,

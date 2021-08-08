@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12 d-grid mt-3 mb-3">
+    <button routerLink="/boats/create" class="btn btn-success w-100">
+      New Boat
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Maker</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let boat of list$ | async">
+          <td>{{ boat.model }}</td>
+          <td>{{ boat.year }}</td>
+          <td>{{ boat.maker }}</td>
+          <td>{{ boat.price }}</td>
+          <td>
+          <button class="btn-group">
+            <button class="btn btn-info">
+              <i class="fas fa-pencil"></i>
+            </button>
+          </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

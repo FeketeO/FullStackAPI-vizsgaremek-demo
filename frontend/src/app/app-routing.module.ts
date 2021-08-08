@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BoatCreateComponent } from './page/boat-create/boat-create.component';
+import { BoatComponent } from './page/boat/boat.component';
 import { CarCreateComponent } from './page/car-create/car-create.component';
 import { CarComponent } from './page/car/car.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path: 'orders',
     component: OrdersComponent,
+  },
+  {
+    path: 'boats',
+    component: BoatComponent,
+  },
+  {
+    path: 'boats/create',
+    component: BoatCreateComponent,
   },
   {
     path: 'login',
